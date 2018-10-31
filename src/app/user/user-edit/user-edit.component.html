@@ -15,49 +15,69 @@
         <label *ngIf="username?.errors.minlength">8 chars min</label>
       </div>
     </div>
-  </div>
- 
-  <div class="container form" *ngIf="user">
+
     <div class="form-group row">
       <label class="col-form-label col-sm-2">First Name:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="user.firstName" class="form-control" type="text" name="firstName" #firstName="ngModel"
-          required minlength="8">
+          required minlength="0">
       </div>
       <div *ngIf="firstName.invalid && firstName.touched" class="col-form-label col-sm-2 text-danger">
         <label *ngIf="firstName?.errors.required">Required</label>
         <label *ngIf="firstName?.errors.minlength">8 chars min</label>
       </div>
     </div>
-  </div>
- 
-  <div class="container form" *ngIf="user">
+
     <div class="form-group row">
       <label class="col-form-label col-sm-2">Last Name:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="user.lastName" class="form-control" type="text" name="lastName" #lastName="ngModel"
-          required minlength="8">
+          required minlength="0">
       </div>
       <div *ngIf="lastName.invalid && lastName.touched" class="col-form-label col-sm-2 text-danger">
         <label *ngIf="lastName?.errors.required">Required</label>
         <label *ngIf="lastName?.errors.minlength">8 chars min</label>
       </div>
     </div>
-  
 
-  <div class="form-group row">
-    <label class="col-form-label col-sm-2">Reviewer:</label>
-    <div class="col-sm-8">
-      <input [(ngModel)]="user.reviewer" class="form-control" type="checkbox" name="reviewer" #reviewer="ngModel">
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Phone Number:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="user.phoneNumber" class="form-control" type="text" name="phone" #phonenumber="ngModel"
+          required minlength="10">
+      </div>
+      <div *ngIf="phonenumber.invalid && phonenumber.touched" class="col-form-label col-sm-2 text-danger">
+        <label *ngIf="phonenumber?.errors.required">Required</label>
+        <label *ngIf="phonenumber?.errors.minlength">10 chars min</label>
+      </div>
     </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-form-label col-sm-2">Admin:</label>
-    <div class="col-sm-8">
-      <input [(ngModel)]="user.admin" class="form-control" type="checkbox" name="admin" #admin="ngModel">
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">E-Mail:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="user.email" class="form-control" type="text" name="email" #email="ngModel" required
+          minlength="8">
+      </div>
+      <div *ngIf="email.invalid && email.touched" class="col-form-label col-sm-2" text-danger>
+        <label *ngIf="email?.errors.required">Required</label>
+        <label *ngIf="email?.errors.minlength">8 chars min</label>
+      </div>
     </div>
-  </div>
-  <div>
-    <button class="btn btn-primary" (click)="save()">Submit</button>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Reviewer:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="user.reviewer" class="form-control" type="checkbox" name="reviewer" #reviewer="ngModel">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2">Admin:</label>
+      <div class="col-sm-8">
+        <input [(ngModel)]="user.admin" class="form-control" type="checkbox" name="admin" #admin="ngModel">
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="save()">Submit</button>
+    </div>
   </div>
 </div>
