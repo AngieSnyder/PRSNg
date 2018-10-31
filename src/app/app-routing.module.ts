@@ -8,11 +8,11 @@ import {UserEditComponent} from './user/user-edit/user-edit.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/users/list', pathMatch: 'full' },
-  { path: 'users/list', component: UserListComponent },
-  { path: 'users/create', component: UserCreateComponent },
-  { path: 'users/detail/:id', component: UserDetailComponent },
-  { path: 'users/edit/:id', component: UserEditComponent },
+  { path: '', redirectTo: '/user/list', pathMatch: 'full' },
+  { path: 'user/list', component: UserListComponent },
+  { path: 'user/create', component: UserCreateComponent },
+  { path: 'user/detail/:id', component: UserDetailComponent },
+  { path: 'user/edit/:id', component: UserEditComponent },
   {path: '**', component:UserListComponent }
 ];
 
