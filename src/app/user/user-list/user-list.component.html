@@ -1,11 +1,11 @@
 <div>
   <div>
     <span>User List</span>
-    | <a routerLink='/user/create'>Create New</a>
+    | <a routerLink='/user/create'>Create User</a>
   </div>
-  <table class="table table-sm">
+  <table class="table table-sm" *ngIf='users'>
     <thead>
-      <tr *ngIf='sortUsers'>
+      <tr>
         <td>Id</td>
         <td>Name</td>
         <td>UserName</td>
