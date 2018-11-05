@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Vendor } from './vendor.class';
 import { JsonResponse } from '../util/json-response.class';
 
-const url = 'http://localhost8080/Vendors/';
+const url = 'http://localhost:8080/Vendor/';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +27,6 @@ export class VendorService {
   remove(vendor:Vendor): Observable<JsonResponse>{
     return this.http.post(url + "Remove", vendor) as Observable<JsonResponse>;
   }
-
 
   constructor(private http: HttpClient) { }
 }

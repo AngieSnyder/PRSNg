@@ -18,6 +18,12 @@ import { AboutComponent } from './about/about/about.component';
 import { HomeComponent } from './home/home/home.component';
 import { BoolDisplayPipe } from './pipes/bool-display.pipe';
 import { SortUsersPipe } from './pipes/sort-users.pipe';
+import { SortVendorsPipe } from './pipes/sort-vendors.pipe';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { SortProductsPipe } from './pipes/sort-products.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { SortUsersPipe } from './pipes/sort-users.pipe';
     AboutComponent,
     HomeComponent,
     BoolDisplayPipe,
-    SortUsersPipe
+    SortUsersPipe,
+    SortVendorsPipe,
+    ProductListComponent,
+    ProductDetailComponent,
+    ProductCreateComponent,
+    ProductEditComponent,
+    SortProductsPipe
   ],
   imports: [
     BrowserModule,

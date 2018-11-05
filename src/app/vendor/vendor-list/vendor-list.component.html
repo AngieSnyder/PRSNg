@@ -1,7 +1,7 @@
 <div>
   <div>
-    <span>Vendor List</span>
-    <a routerLink='/vendor/create'>Create Vendor</a>
+    <span> Vendor List </span>
+    | <a routerLink='/vendor/create'> Create New </a>
   </div>
   <table class="table table-sm" *ngIf='vendors'>
     <thead>
@@ -13,17 +13,18 @@
         <td>PhoneNumber</td>
         <td>E-Mail</td>
         <td>PreApproved</td>
+        <td>Action</td>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor= 'let vendor of vendors | sortVendors'>
         <td>{{vendor.id}}</td>
         <td>{{vendor.code}}</td>
-        <td>{{vendor.name}</td>
+        <td>{{vendor.name}}</td>
         <td>{{vendor.address}} {{vendor.city}} {{vendor.state}} {{vendor.zip}}</td>
         <td>{{vendor.phoneNumber}}</td>
         <td>{{vendor.email}}</td>
-        <td>{{vendor.isPreApproved}} | bool</td>
+        <td>{{vendor.isPreApproved | bool }}</td>
         <td>
           <a routerLink='/vendor/detail/{{vendor.id}}'>Detail</a>
           | <a routerLink='/vendor/edit/{{vendor.id}}'>Edit</a>
@@ -31,4 +32,4 @@
       </tr>
     </tbody>
   </table>
-</div>>
+</div>
