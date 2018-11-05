@@ -1,3 +1,18 @@
-<p>
-  product-detail works!
-</p>
+<div class="component">
+  <div>
+    <span>Product Detail</span>
+  </div>
+  <p *ngIf='!product'>Retrieving data... This may take a while.</p>
+  <table class="table table-sm form-smaller" *ngIf="product">
+    <tr><td>Id:</td><td>{{product.id}}</td></tr>
+    <tr><td>Part Number:</td><td>{{product.partNumber}}</td></tr>
+    <tr><td>Name:</td><td>{{product.name}}</td></tr>
+    <tr><td>Price:</td><td>{{product.price}}</td></tr>
+    <tr><td>Unit:</td><td>{{product.unit}}</td></tr>
+    <tr><td>Vendor:</td><td>{{product.vendor}}</td></tr>
+    <tr><td>PhotoPath:</td><td>{{product.photoPath}}</td></tr>
+  </table>
+  <div>
+      <button class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+</div>

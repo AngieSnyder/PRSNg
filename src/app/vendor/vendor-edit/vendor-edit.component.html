@@ -8,8 +8,8 @@
     <div class="form-group row">
       <label class="col-form-label col-sm-2">Code:</label>
       <div class="col-sm-8">
-        <input [(ngModel)]="vendor.code" class="form-control" type="text" name="code" #code="ngModel" required
-          maxlength="10">
+        <input [(ngModel)]="vendor.code" class="form-control" type="text" 
+          name="code" #code="ngModel" required maxlength="10">
       </div>
       <div *ngIf="code.invalid && code.touched" class="col-form-label col-sm-2 text-danger">
         <label *ngIf="code?.errors.required">Required</label>
@@ -21,7 +21,7 @@
       <label class="col-form-label col-sm-2">Name:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="vendor.name" class="form-control" type="text" name="name" 
-        #name="ngModel" required minlength="5" maxlength="30">
+          #name="ngModel" required minlength="5" maxlength="30">
       </div>
       <div *ngIf="name.invalid && name.touched" class="col-form-label col-sm-2 text-danger">
         <label *ngIf="name?.errors.required">Required</label>
@@ -34,7 +34,7 @@
       <label class="col-form-label col-sm-2">Address:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="vendor.address" class="form-control" type="text" address="address" 
-        #address="ngModel" required minlength="1" maxlength="50">
+          #address="ngModel" required minlength="1" maxlength="50">
       </div>
       <div *ngIf="address.invalid && address.touched" class="col-form-label col-sm-2 text-danger"> 
         <label *ngIf="address?.errors.required">Required</label>

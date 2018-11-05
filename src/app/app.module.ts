@@ -24,6 +24,13 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { SortProductsPipe } from './pipes/sort-products.pipe';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestReviewDetailComponent } from './request/request-review-detail/request-review-detail.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +53,14 @@ import { SortProductsPipe } from './pipes/sort-products.pipe';
     ProductDetailComponent,
     ProductCreateComponent,
     ProductEditComponent,
-    SortProductsPipe
+    SortProductsPipe,
+    RequestListComponent,
+    RequestEditComponent,
+    RequestDetailComponent,
+    RequestCreateComponent,
+    RequestLinesComponent,
+    RequestReviewDetailComponent,
+    RequestReviewListComponent
   ],
   imports: [
     BrowserModule,
