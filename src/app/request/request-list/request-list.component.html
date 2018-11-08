@@ -1,3 +1,32 @@
-<p>
-  request-list works!
-</p>
+<div>
+  <div>
+    <span> Purchase Request List </span>
+      <a routerLink='/purchaseRequest/create'> Create New </a>
+  </div>
+  <table class = "table table-sm" *ngIf="requests">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Description</td>
+        <td>Status</td>
+        <td>Total</td>
+        <td>User</td>
+        <td>Justification</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= 'let request of requests'>
+        <td>{{request.id}}</td>
+        <td>{{request.description}}</td>
+        <td>{{request.status}}</td>
+        <td>{{request.total}}</td>
+        <td>{{request.user}}</td>
+        <td>{{request.justification}}</td>
+        <td>
+          <a routerLink='/request/detail/{{request.id}}'>Detail</a>
+          <a routerLink='/request/edit/{{request.id}}'>Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

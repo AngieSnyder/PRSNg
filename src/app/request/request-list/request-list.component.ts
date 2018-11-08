@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SystemService } from 'src/app/system/system.service';
+import { RequestService } from '../request.service';
 @Component({
   selector: 'app-request-list',
   templateUrl: './request-list.component.html',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestListComponent implements OnInit {
 
-  constructor() { }
+  requests: Request[];
+
+  constructor(
+    private sys: SystemService,
+    private requestsvc: RequestService
+  ) { }
 
   ngOnInit() {
+    this.sys.checkForLogin();
+    this.requestsvc.list()
+      .subscribe(resp => {
+        console.log("Request:", resp);
+        this.requests = resp.data;
+      });
   }
 
 }
