@@ -1,4 +1,5 @@
 import {Vendor} from '../vendor/vendor.class';
+import { CurrencyIndex } from '@angular/common/src/i18n/locale_data';
 
 export class Product {
     id: number;

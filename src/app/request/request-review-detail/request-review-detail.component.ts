@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from '../request.service';
 
 @Component({
   selector: 'app-request-review-detail',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestReviewDetailComponent implements OnInit {
 
-  constructor() { }
+  userId: number;
+  request: Request[];
+
+  constructor(
+    private requestsvc:RequestService
+  ) { }
 
   ngOnInit() {
+    this.requestsvc.review(this.userId)
+    .subscribe(resp =>{
+      console.log("request:", resp);
+      this.request = resp.data;
+    });
   }
 
 }

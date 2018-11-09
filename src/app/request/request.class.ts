@@ -2,7 +2,8 @@ import { User } from "../user/user.class";
 
 export class Request {
     id: number;
-    user: User;
+	user: User;
+	userId: number;
     description: string;
 	justification: string;
 	dateNeeded: string;
@@ -15,7 +16,7 @@ export class Request {
 	constructor() {
 		this.id = 0;
 		this.total = 0;
-		this.deliveryMode = "Pickup";
+		this.dateNeeded = null;
 		this.submittedDate = (new Date()).toLocaleDateString();
 		this.status = "New";
 	}

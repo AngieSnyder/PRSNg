@@ -11,12 +11,10 @@ export class RequestListComponent implements OnInit {
   requests: Request[];
 
   constructor(
-    private sys: SystemService,
     private requestsvc: RequestService
   ) { }
 
   ngOnInit() {
-    this.sys.checkForLogin();
     this.requestsvc.list()
       .subscribe(resp => {
         console.log("Request:", resp);

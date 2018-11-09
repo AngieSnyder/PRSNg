@@ -15,7 +15,7 @@ export class VendorDetailComponent implements OnInit {
   delete(): void {
     this.vendorsvc.remove(this.vendor)
     .subscribe(resp =>{
-      console.log("resp", resp);
+      console.log("resp: ", resp);
       this.router.navigateByUrl('/vendor/list');
     })
   }
@@ -30,7 +30,7 @@ export class VendorDetailComponent implements OnInit {
     let id = this.route.snapshot.params.id;
     this.vendorsvc.get(id)
     .subscribe(resp =>{
-      console.log("resp:", resp);
+      console.log("resp: ", resp);
       this.vendor = resp.data;
     });
   }
